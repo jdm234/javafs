@@ -18,8 +18,9 @@
     width: 1200px;
     margin: 0 auto;
 }
-.logo, nav, #contents div, footer div {
-    float: left;
+header, #contents, footer {
+    /* float: left; */
+    display:flex;
 }
 
 /* 헤더 */
