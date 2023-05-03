@@ -16,12 +16,10 @@ a {
     color: #000;
 }
 
-/* 목록의 마커 제거 */
 li {
     list-style: none;
 }
 
-/* header */
 header {
     position: fixed;
     top: 0;
@@ -29,7 +27,7 @@ header {
     width: 100%;
     padding: 0 32px;
     height: 54px;
-    background: #777;
+    background: gold;
 }
 
 .logo {
@@ -44,7 +42,6 @@ nav li {
     display: inline-block;
 }
 
-/* section common */
 section {
     width: 1496px;
     margin: 0 auto;
@@ -55,7 +52,7 @@ section {
 }
 
 .section h2 {
-    margin-bottom: 16px;
+    margin-top: 16px;
     padding-top: 16px;
     border-bottom: 1px solid #ccc;
 }
@@ -64,7 +61,6 @@ section {
     margin-bottom: 32px;
 }
 
-/* section1 */
 #main_img {
     position: relative;
 }
@@ -78,7 +74,6 @@ section {
     padding: 8px 24px;
 }
 
-/* section2 */
 #menu ul::after {
     content: '';
     clear: both;
@@ -86,23 +81,43 @@ section {
 }
 
 #menu li {
-    float: left;
+    background: #555;
+    margin-bottom: 16px;
+    display: inline-block;
+    color: #fff;
+    text-align: left;
+    left: 50%;
+    top: 50%;
 }
 
 #menu li:not(:nth-of-type(4)) {
-    margin-right: 16px;
+    margin-right: 8px;
 }
 
 #menu h2 {
     margin-bottom: 48px;
 }
 
-/* section3 */
+#event_img {
+    position: relative;
+}
+
+#event_img h2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #555;
+    padding: 8px 24px;
+}
+
 #event li h3 {
-    margin: 16px 0 8px;
+    margin: 8px 0 8px;
 }
 
 #event li a {
+    width: 362px;
+    height: 36px;
     margin: 8px 0;
 }
 
@@ -114,10 +129,17 @@ section {
 
 #event li {
     float: left;
+    width: 360px;
+    height: 240px;
+    margin: 0;
+}
+
+#event h2+p {
+    margin-bottom: 4px;
 }
 
 #event li:not(:nth-of-type(4)) {
-    margin-right: 16px;
+    margin-right: 8px;
 }
 
 #event li a {
@@ -128,9 +150,6 @@ section {
     margin-top: 8px;
 }
 
-/* section4 */
-
-/* footer */
 footer {
     height: 81px;
     background: #000;
