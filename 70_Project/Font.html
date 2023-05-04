@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <!-- <link> 태그는 <head> 사이에 -->
+    <!-- <link> 방식 또는 @import 방식 둘 중 하나만 사용한다. -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+        /* 
+            font-family: 이름; -> 이름은 임의로 정한다.
+        
+            @font-face {
+            font-family: '알라딘';
+            src: url('/51_css/assets/font/SeoulNamsanL.ttf');
+            
+            아래 주소로 표현시 html문서를 서버에 올려서 확인
+            src: url('http://id.dothome.co.kr/font/SeoulNamsanL.ttf');
+            src: url('/font/SeoulNamsanL.ttf');
+            }
+
+            예)
+            @font-face {
+                font-family: 이름
+                src: ulr('font/aladdin.ttf');
+            }
+         */
+        .ff1 {
+            font-family: 'Noto Sans KR', sans-serif; 
+        }
+
+        @font-face {
+                font-family: 알라딘;
+                src: url('font/aladdin.ttf');
+            }
+        
+        .ff2 {
+            font-family: 알라딘;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>웹 폰트</h1>
+    <p>구글 웹 폰트(Google Web Font) 지정 안함.</p>
+    <p class="ff1">구글 웹 폰트(Google Web Font) 지정 했음.</p>
+    <p>서울 서체(Seoul Font) 지정 안함.</p>
+    <p class="ff2">서울 서체(Seoul Font) 지정 했음.</p>
+</body>
+
+</html>
