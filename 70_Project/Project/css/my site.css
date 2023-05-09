@@ -49,9 +49,12 @@ header i {
     margin-right: 8px;
 }
 /* section1 */
-#home {
+.home div {
     position: relative;
-    background-image: url(../images/parallax1.jpg) no-repeat 50% 50%/cover fixed;
+    background-image: url(/70_Project/images/parallax1.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%; 
+    background-attachment: cover fixed;
     height: 930px;
 }
 .logo a {
