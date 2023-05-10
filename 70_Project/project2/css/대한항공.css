@@ -1,38 +1,97 @@
 @charset "utp-8";
 
 /* reset */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .body {
-    color: #000;
-    background: #fff;
+    color: green;
+    background: gray;
+    margin-top: 36px;
 }
 
 a {
-    color: blue;
-    align-items: right;
+    color: brown;
+}
+
+li {
+    list-style: none;
 }
 
 /* header */
 header {
-    position: fixed;
+    position: absolute;
+    top: 0;
     z-index: 9999;
     width: 100%;
     height: 54px;
     padding: 0 32px;
-    background: #fff; 
-    align-items: center;
+
 }
 
+/* section common */
 .logo {
     float: left;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
 }
 
-.nav {
+nav {
     float: right;
 }
 
+nav li {
+    display: inline-block;
+}
+
+
+section {
+    width: 3840px;
+    margin: 0 auto;
+}
+
+/* section */
+.section {
+    padding-top: 81px;
+}
+
+.section h2 {
+    margin-bottom: 16px;
+    padding-top: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.section h2 + p {
+    margin-bottom: 32px;
+}
+
+.main-img {
+    position: relative;
+}
+
+/* section2 */
+.Submenu ul::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+#Submenu li {
+    float: left;
+}
+
+#Submenu li {
+    float: left;
+}
+
+#Submenu li:not(:nth-of-type(4)) {
+    margin-right: 16px;
+}
+
+#Submenu h2 {
+    margin-bottom: 48px;
+}
