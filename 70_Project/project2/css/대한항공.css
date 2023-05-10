@@ -1,0 +1,38 @@
+@charset "utp-8";
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    color: #000;
+    background: #fff;
+}
+
+a {
+    color: blue;
+    align-items: right;
+}
+
+/* header */
+header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 54px;
+    padding: 0 32px;
+    background: #fff; 
+    align-items: center;
+}
+
+.logo {
+    float: left;
+}
+
+.nav {
+    float: right;
+}
+
