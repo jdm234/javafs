@@ -51,14 +51,7 @@ header i {
 /* section1 */
 .home div {
     position: relative;
-<<<<<<< Updated upstream
-    background-image: url(/70_Project/images/parallax1.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%; 
-    background-attachment: cover fixed;
-=======
     background-image: url(70_Project/images/parallax1.jpg) no-repeat 50% 50%/cover fixed;
->>>>>>> Stashed changes
     height: 930px;
 }
 .logo a {
