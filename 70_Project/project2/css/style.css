@@ -35,10 +35,13 @@ header {
 
 /* section common */
 .logo {
+    display: block;
     float: left;
+    top: 0;
     width: 100%;
-    height: 36px;
-    font-size: 20px;
+    margin-top: -5px;
+    margin-bottom: -40px;
+    font-size: 16px;
 }
 
 nav {
@@ -63,8 +66,8 @@ nav li {
 }
 
 .button h2 {
-    margin-bottom: 16px;
-    block-size: 12px;
+    margin-bottom: 24px;
+    block-size: 18px;
 }
 
 /* section */
@@ -73,22 +76,23 @@ nav li {
 }
 
 .section li {
-    width: 409px;
-    height: 0 auto;
-    text-align: center;
+    width: 400px;
+    height: 0 32px;
     float: left;
+    display: block;
     color: blue;
 }
 
 .section div {
-    margin: 0 -33px;
+    margin-top: 22px;
     padding: 12px;
     display: inline-block;
 }
 
 
 #Contact {
-    margin-top: 500px;
+    width: 100%;
+    margin-top: 8px;
 }
 
 .section ul::after {
