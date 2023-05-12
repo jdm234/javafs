@@ -1,16 +1,20 @@
 @charset "utf-8";
+
 /* 초기화 */
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 .clearfix::after {
     content: '';
-    clear:both;
+    clear: both;
     display: block;
 }
 
+/* 초기화 */
+magin
 
 /* 공통 */
 #wrap {
@@ -18,70 +22,112 @@
     width: 1200px;
     margin: 0 auto;
 }
-header, #contents, footer {
+
+header,
+#contents,
+footer {
     /* float: left; */
-    display:flex;
+    display: flex;
 }
 
 /* 헤더 */
 header {
     background-color: lightblue;
 }
+
 /* 로고 */
 .logo {
     height: 100px;
     background-color: lightgreen;
 }
+
 /* 내비게이션 */
 nav {
     width: 1000px;
     height: 100px;
     background-color: purple;
 }
+
 /* 슬라이드 */
 #slide {
     height: 300px;
     background-color: lightcoral;
+    overflow: hidden;
 }
+
+#slide ul {
+    position: relative;
+    left: 0;
+    display: flex;
+    width: 400%;
+    animation: slide 9s infinite;
+}
+
+@keyframes slide {
+    0% {left: 0;}
+    5% {left: -100%;}
+    33% {left: -100%;}
+    38% {left: -200%;}
+    66% {left: -200%;}
+    71% {left: -300%;}
+    99.9% {left: -300%;}
+    100% {left:0;}
+}
+
+#slide img {
+    height: 300px;
+}
+
 /* 메인 콘텐츠 */
 #contents {
+    width: 400px;
     height: 200px;
 }
+
 #contents div {
+    width: 400px;
     height: 400px;
 }
+
 .tabs {
     width: 200px;
     height: 100px;
-    background-color: olive;   
+    background-color: olive;
 }
+
 .banner {
     width: 300px;
     height: 100px;
     background-color: peru;
 }
+
 .shortcut {
     width: 300px;
     height: 300px;
 }
+
 #contents {
     height: 200px;
     background-color: lightcyan;
 }
+
 /* 푸터 */
 footer {
     background-color: lightgoldenrodyellow;
 }
+
 .b_logo {
     width: 200px;
     height: 100px;
     background-color: brown;
 }
+
 .addr {
     width: 800px;
     height: 100px;
     background-color: beige;
 }
+
 .sns {
     width: 200px;
     height: 100px;
