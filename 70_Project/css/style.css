@@ -29,7 +29,7 @@ header i {
 .home div {
     position: relative;
     height: 930px;
-    background-image: url(70_Project/images/parallax1.jpg) no-repeat 50% 50%/cover fixed;
+    background-image: url(../images/parallax1.jpg) no-repeat 50% 50%/cover fixed;
 }
 .logo {
     position: absolute;
@@ -40,8 +40,10 @@ header i {
     transform: translate(-50%, -50%);
 }
 
-.logo a {
-    background: gold;
+/* section2~4 공통 */
+.container {
+    width: 960px;
+    margin: 0 auto;
 }
 
 /* section2 */
@@ -50,9 +52,8 @@ header i {
     height: 290px;
 }
 /* section3 */
-#portfolio div {
-    height: 410px;
-    background: url(70_Project/images/parallax2.jpg) no-repeat 50% 50%/cover fixed;
+#portfolio .parallax {
+    background-image: url(../images/parallax2.jpg) no-repeat 50% 50%/cover fixed;
 }
 /* 
     mex-width: 960px
@@ -60,9 +61,16 @@ header i {
     1 column : 69px
     gutter: 12px
 */
+#portfolio ul {
+    display: flex;
+}
+
 #portfolio li {
     width: 231px;
     height: 162px;
 }
 /* section4 */
+.contact .parallax {
+    background-image: url(../images/parallax3.jpg) no-repeat 50% 50%/cover fixed;
+}
 /* footer */
