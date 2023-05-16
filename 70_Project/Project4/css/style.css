@@ -37,10 +37,6 @@ a {
     margin: 0 auto;
 }
 
-header, #contents, footer {
-    display: flex;
-}
-
 /* 헤더 */
 header {
     display: flex;
@@ -53,7 +49,6 @@ header {
 .logo {
     width: 200px;
     height: 100px;
-    background-color: lightgreen;
 }
 
 /* 내비게이션 */
@@ -72,6 +67,7 @@ nav li {
     margin: 8px;
     text-align: center;
     background: gold;
+    display: inline-block;
 }
 
 .nav sub {
@@ -110,7 +106,12 @@ nav li {
 }
 
 /* 메인 콘텐츠 */
-#contents div {
+#contents {
+    display: flex;
+    padding: 8px 0;
+}
+
+#contents > div {
     width: 400px;
     height: 200px;
 }
@@ -183,23 +184,46 @@ nav li {
 
 /* 푸터 */
 footer {
-    background-color: lightgoldenrodyellow;
-}
-
-.b_logo {
-    width: 200px;
-    height: 100px;
-    background-color: brown;
+    display: flex;
+    align-content: center;
+    background-color: orange;
+    color: paleturquoise;
+    margin: 23px 0;
 }
 
 .addr {
-    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1000px;
     height: 100px;
-    background-color: beige;
+    background: url(../images/logo2.png) no-repeat 30px 50%/70%;
+    
 }
 
 .sns {
-    width: 200px;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    /* flex: glow shrink basis */
+    flex: 0 0 200px;
     height: 100px;
-    background-color: lightpink;
+}
+
+.sns a {
+    color: darkkhaki;
+    margin: 0 8px;
+    transition: .3s;
+}
+.sns a:nth-of-type(1):hover {
+    transform: scale(1.2, 1.2);
+    color: #395498;
+}
+.sns a:nth-of-type(2):hover {
+    transform: scale(1.2, 1.2);
+    color: #1C9CEA;
+}
+.sns a:nth-of-type(3):hover {
+    transform: scale(1.2, 1.2);
+    color: #F60065;
 }
