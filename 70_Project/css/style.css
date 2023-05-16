@@ -1,63 +1,68 @@
 @charset "utp-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
-/* reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html {
-    font-size: 10px;
-}
-body {
-    font: 1.5rem 'Noto Sans KR', sans-serif; 
-    color: #333;
-}
-
-/* a태그 글자 색은 body태그의 글자색을 상속받지 않는다. */
-a {
-    color: #333;
-}
-img {
-    width: 100%;
-}
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url('reset.css');
+@import url('typo.css');
 
 /* header */
 header {
     position: fixed;
-    width: 100%;
     z-index: 9999;
+    width: 100%;
 }
 header ul {
-    height: 54px;
-    padding: 0 32px; 
-    height: 100%;
     display: flex;
     align-items: center;
+    height: 54px;
+    padding: 0 16px; 
 }
-header li {
-    margin: 0 8px;
-} 
 header a {
     padding: 4px 16px;
 }
 header a:hover {
     background: #ccc;
 }
-/* section1 */
-/* 요소를 부모 안에 정가운데 배치 */
-#home {
-    position: relative;
+header i {
+    margin-right: 8px;
 }
-.logo a {
+/* section1 */
+.home div {
+    position: relative;
+    height: 930px;
+    background-image: url(70_Project/images/parallax1.jpg) no-repeat 50% 50%/cover fixed;
+}
+.logo {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    background: green;
     padding: 8px 24px;
+    background: #000;
+    transform: translate(-50%, -50%);
 }
+
+.logo a {
+    background: gold;
+}
+
 /* section2 */
+.photo {
+    width: 425px;
+    height: 290px;
+}
 /* section3 */
+#portfolio div {
+    height: 410px;
+    background: url(70_Project/images/parallax2.jpg) no-repeat 50% 50%/cover fixed;
+}
+/* 
+    mex-width: 960px
+    column count: 12
+    1 column : 69px
+    gutter: 12px
+*/
+#portfolio li {
+    width: 231px;
+    height: 162px;
+}
 /* section4 */
 /* footer */
