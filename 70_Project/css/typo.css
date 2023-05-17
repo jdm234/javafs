@@ -1,5 +1,6 @@
 @charset "utp-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
 /* reset */
 * {
     margin: 0;
@@ -14,50 +15,63 @@ body {
     color: #333;
 }
 
-/* a태그 글자 색은 body태그의 글자색을 상속받지 않는다. */
-a {
-    color: #333;
-}
-img {
-    width: 100%;
+h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
 }
 
-/* header */
-header {
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
+a {
+    color: #333;
+
 }
-header ul {
-    height: 54px;
-    padding: 0 32px; 
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-header li {
-    margin: 0 8px;
-} 
-header a {
-    padding: 4px 16px;
-}
-header a:hover {
-    background: #ccc;
-}
-/* section1 */
-/* 요소를 부모 안에 정가운데 배치 */
-#home {
-    position: relative;
-}
+
+/* 로고 */
 .logo a {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: green;
-    padding: 8px 24px;
+    color: #fff;
 }
-/* section2 */
-/* section3 */
-/* section4 */
-/* footer */
+
+/* 섹션2 - 진행바 */
+.progress .lst div {
+    color: #fff;
+}
+
+.progress > .lst span {
+    letter-spacing: 8px;
+} 
+
+/* 섹션2 카운터 */
+.counter {
+    color: #fff;
+}
+.counter span {
+    font-size: 2.4rem;
+}
+
+/* 패럴렉스 */
+.parallax {
+    font-size: 3.6rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: aqua;
+}
+
+.parallax b {
+    font-weight: 400;
+}
+
+/* 푸터 */
+footer {
+    color: #fff;
+}
+footer .topBtn a {
+    color: #333;
+}
+
+footer .topBtn a:hover {
+    color: #fff;
+}
+
+footer .sns a {
+    color: #fff;
+    font-size: 2.4rem;
+}
