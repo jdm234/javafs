@@ -1,6 +1,5 @@
-@charset "utf-8";
+@charset 'utf-8';
 
-/* reset */
 * {
     margin: 0;
     padding: 0;
@@ -15,17 +14,13 @@ body {
     background: #fff;
 }
 
-a{
-    color: #333;
-    text-decoration: ;
-}
-
 img {
-
+    width: 100%;
+    vertical-align: top;
 }
 
 li {
-    text-align: ;
+    list-style: none;
 }
 
 iframe {
