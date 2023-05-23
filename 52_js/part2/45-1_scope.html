@@ -20,6 +20,21 @@
                 - 모든 영역에서 호출될 수 있는 함수
         */
 
+        function myfn() { 
+            cosole.log('전역함수1');
+         }
+
+        function myfn() { 
+            cosole.log('전역함수2');
+            function myfn3() {
+                cosole.log('지역함수');
+            }
+            myfn3();
+         }
+
+         myfn1();
+         myfn2();
+         // myfn3();
 
 
     </script>
