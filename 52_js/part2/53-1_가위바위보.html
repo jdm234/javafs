@@ -17,43 +17,77 @@
             Math.ceil(숫자): 소수점 첫째 자리에서 올림한 정수 반환
        */
 
+        // 0 <= x < 1
+       Math.random()
         // 0 ~ 10 사이 난수
-        Math.random() * 10;
+        // 0 <= x < 11
+        Math.random() * 11;
 
-        // 0 ~ 30 사이 임의 정수
+
+        // 0 ~ 31 사이 임의 정수
+         //  <= x < 31
         Math.floor(Math.random() * 31)
 
         // 120 ~ 150 사이 임의 정수
+        // 120 <= x && x < 150 - 120
+        // 0 <= x < 30
         // Math.floor(Math.random() * (최댓값 - 최솟값 + 1)) + 최솟값;
         Math.floor(Math.random() * 31) + 120
 
-        document.write('<h2>컴퓨터 가위, 바위, 보 맞추기</h2>');
+        // -10 ~ 10 사이 임의 정수?
+        // -10 <= x < 11
+        // 0 * 21 -10 <= x < 1* 21 -10
+        //공식: Math.floor(Math.random() * (최댓값 - 최솟값 + 1)) + 최솟값
+        //공식: Math.floor(Math.random() * 21)) - 10
+        Math.random() * 21 - 10
+        /* 
+            컴퓨터가 가위, 바위, 보 중 어떤 것을 내어지는지 맞춰보세요.
+            - 변수: game, gameNum
+            - 메서드: prompt(), ceil(), random()
+            - 제어문: switch, if ~ else
+            - 입력 데이터를 잘못 작성했을 경우 메시지를 출력하고, 브라우저  새로고침한다.            
+        */
+        // 문자열 기록시 \(백슬래쉬) 뒤에 특수문자는 특수문자로 인식하여 표시된다.
 
-        var game = prompt('가위, 바위, 보 중 쓰세요', '가위');
-        var gameNum;
-
-        switch (game) {
-            case '가위':
-                gameNum = 1; break;
-            case '바위':
-                gameNum = 2; break;
-            case '보':
-                gameNum = 3; break;
-            default: alert('잘못 작성했습니다.');
-            // 브라우저 새로고침
-            location.reload();
-        }
+       document.write('나는 \ "문자열이다. \"' ('<br>'));
+       
+        let game = prompt('가위, 바위, 보 셋 중 하나만 입력하세요.'); 
 
         var com = Math.ceil(Math.random() * 3);
-        document.write('<img src=\'../assets/math_img_' + com + '.jpg\'>');
 
-        if (gameNum == com) {
-            document.write('<img src=\'../assets/game_1.jpg\'>');
-        } else {
-            document.write('<img src=\'../assets/game_2.jpg\'>');
+        switch (game) {
+            case '가위': 
+                gameNum = 1;
+                break
+        }
+        switch (game) {
+            case '바위': 
+                gameNum = 2;
+                break;
+        }
+        switch (game) {
+            case '보': 
+                gameNum = 3;
+                break;
+            default:
+                alert('가위, 바위, 보 셋 중 하나 만 입력하세요.');
+                location.reload();
         }
 
-    </script>
+        // 1~3 사이 정수
+        //Math.floor(Math.radonm() * 3) + 1)
+        let com = Math.floor(Math.radonm() * 3) + 1;
+        document.write('<img src="../assets/math_img_' + com + '.jpg "alt="가위"><br>')
+
+        if (gameNum === com) {
+            document.write('축하합니다. 맞추었습니다.');
+        }else {
+            document.write('틀렸습니다. 다음 기회에...');
+        }
+
+
+
+        </script>
 </body>
 
 </html>
