@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>애플리케이션테스트수행_지동민</title>
     <style>
         /* 초기화 */
         * {
@@ -24,11 +24,11 @@
 
         a {
             text-decoration: none;
-            color: #333;
+            color: #333333;
         }
 
         body {
-            font: 1.5rem/1.8 sans-serif;
+            font: 1.6rem/1.8 sans-serif;
         }
 
         /* 레이아웃 */
@@ -37,7 +37,7 @@
         }
 
         header {
-            background: #cbcbcb;
+            background: orangered;
         }
 
         nav {
@@ -45,14 +45,10 @@
             background: #000;
         }
 
-        footer {
-            background: #5c5c5c;
-        }
-
         /* 헤더 */
         header {
             text-align: center;
-            padding: 40px 0;
+            padding: 30px 0;
         }
 
         /* GNB */
@@ -64,9 +60,10 @@
         /* 1depth */
         .main>li {
             float: left;
-            width: 160px;
-            height: 40px;
-            background: #000;
+            width: 200px;
+            height: 35px;
+            margin: 0 4px;
+            background: #1ddb92;
             text-align: center;
         }
 
@@ -74,20 +71,20 @@
             display: block;
             font-size: 1.6rem;
             font-weight: bold;
-            line-height: 40px;
-            color: #fff;
+            line-height: 35px;
+            color: #333333;
             transition: .3s;
         }
 
         .main>li>a:hover {
-            background: rgb(62, 150, 231);
+            background: orange;
         }
 
         /* 2depth */
         .sub {
             display: none;
             padding: 10px 0 20px 0;
-            background: rgba(0, 255, 55, 0.678);
+            background: rgba(223, 236, 41, 0.555);
         }
 
         .sub a {
@@ -97,8 +94,8 @@
         }
 
         .sub a:hover {
-            background: rgba(240, 140, 9, 0.884);
-            color: #111;
+            background: #b3ee54;
+            color: #ffffff;
         }
 
         /* 슬라이드 */
@@ -124,6 +121,7 @@
             position: relative;
             left: 0;
             top: 0;
+            display: flex;
             height: 400%;
             animation: slide 9s infinite;
         }
@@ -139,28 +137,24 @@
                 left: 0;
             }
 
-            5% {
+            41% {
                 left: -100%;
             }
 
-            33% {
+            54% {
                 left: -100%;
             }
 
-            38% {
+            79% {
                 left: -200%;
             }
 
-            66% {
+            90% {
                 left: -200%;
-            }
-
-            71% {
-                left: -300%;
             }
 
             99.99% {
-                left: -300%;
+                left: -200%;
             }
 
             100% {
@@ -171,7 +165,7 @@
         /* 푸터 */
         footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 20px 0;
         }
     </style>
 </head>
@@ -179,68 +173,60 @@
 <body>
     <div id="wrap">
         <header>
-            <h1 class="logo"><a href="#">이탈리아</a></h1>
+            <h1 class="logo"><a href="#">Vallery Festival</a></h1>
         </header>
         <nav id="gnb">
             <ul class="main">
                 <li>
-                    <a href="#">메인메뉴1</a>
+                    <a href="#">축제소개</a>
                     <ul class="this">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
+                        <li><a href="#">Festival 소개</a></li>
+                        <li><a href="#">행사장 안내</a></li>
+                        <li><a href="#">조직위원회</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">메인메뉴2</a>
+                    <a href="#">예약안내</a>
                     <ul class="this">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">예약확인/취소</a></li>
+                        <li><a href="#">단체예약문의</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">메인메뉴3</a>
+                    <a href="#">아티스트</a>
                     <ul class="this">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
+                        <li><a href="#">고릴라즈</a></li>
+                        <li><a href="#">메이저 레이저</a></li>
+                        <li><a href="#">아우스게인</a></li>
+                        <li><a href="#">타임로드</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">메인메뉴4</a>
+                    <a href="#">커뮤니티</a>
                     <ul class="this">
-                        <li><a href="#">서브메뉴1</a></li>
-                        <li><a href="#">서브메뉴2</a></li>
-                        <li><a href="#">서브메뉴3</a></li>
-                        <li><a href="#">서브메뉴4</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">사진갤러리</a></li>
+                        <li><a href="#">영상갤러리</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
         <div class="slide">
-            <h2>메인 타이틀</h2>
+            <h2>Vallery Festival</h2>
             <ul>
-                <li><img src="../assets/slide1.jpg" alt="테스트"></li>
-                <li><img src="../assets/slide2.jpg" alt="테스트"></li>
-                <li><img src="../assets/slide3.jpg" alt="테스트"></li>
-                <li><img src="../assets/slide1.jpg" alt="테스트"></li>
+                <li><img src="../assets/test1.jpg" width="1200px" height="300px" alt="이미지"></li>
+                <li><img src="../assets/test2.jpg" width="1200px" height="300px" alt="이미지"></li>
+                <li><img src="../assets/test3.jpg" width="1200px" height="300px" alt="이미지"></li>
             </ul>
         </div>
-        <footer>
-            <p>Copyright 2023 이탈리아. All rights reserved.</p>
-        </footer>
     </div>
-
-    <!-- 제이쿼리 라이브러리 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <footer>
+        <p>Copyright 2023 Vallery Festival. All rights reserved.</p>
+    </footer>
     <script>
         $(function () {
             $('.main > li').mouseenter(function () {
-                /* this란? 이벤트를 발생시킨 주체 */
                 $('.this').stop().slideDown();
             });
             $('.main > li').mouseleave(function () {
