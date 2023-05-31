@@ -10,6 +10,7 @@
         body {
             height: 2000px;
         }
+
         div {
             width: 300px;
             height: 300px;
@@ -17,12 +18,15 @@
             font-size: 50px;
             color: #fff;
         }
+
         .box1 {
             background: red;
         }
+
         .box2 {
             background: blue;
         }
+
         p {
             font-size: 30px;
         }
@@ -33,6 +37,7 @@
     <div class="box1">박스1</div>
     <div class="box2">박스2</div>
     <p></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
     <script>
         /* 
@@ -60,43 +65,48 @@
             요소.addEventListener('이벤트명', function(){});
 
             //제이쿼리
-            $('선택자').이벤트명(function(){});
+            $('선택자').이벤트명 = function(){};
             $('선택자').on('이벤트명', function(){});
+            $('선택자').text(값);
 
         */
 
-        // box1을 클릭하면 함수를 호출한다.
-        // var 변수 = 값;
-        // 객체.속성 = 값;
-        var box1 = document.querySelector('.box1');
-        var box2 = document.querySelector('.box2');
-        const pTag = document.querySelector('p');
-        box1.onclick = ev;
-        box2.onclick = ev;
+            // box1을 클릭하면 함수를 호출한다.
+            // var 변수 = 값;
+            // 객체.속성 = 값;
 
-        box1.click(function () {
-            pTag.text = ('box1을 클릭했습니다.');
+        // .box1을 클릭하면 함수를 호출한다.
+        const box1 = $('.box1');
+        const box2 = $('.box2');
+        const pTag = $('p');
+
+        box1.on('click', function () {
+            pTag.text('box1을 클릭했엉.');
         });
 
-        box2.mouseenter(ev);
+        box1.on('mouseenter', ev);
 
-        function ev1() {
-            pTag.innerText = ('box2위에  마우스를 올렸습니다.');
-        };
-        box2.onmouseleave = ev2;
-        객체.addEventListeener('moseleave', ev2);
+        function ev() {
+            pTag.text('box1에 마우스를 올렸엉');
+        }
 
-        function ev2() {
-            pTag.innerText = 'box2위에서  마우스를 벗어났습니다.';
-        };
+        box1.on('mouseleave', function () {
+            pTag.text('box1에서 마우스가 벗어났엉.');
+        });
 
-        // scroll, resize는 윈도우 이벤트이다.
-        window.onscroll = function(){
-           pTag.innerText = '스크롤 되었습니다.';
-        };
-        window.onresize = function(){
-           pTag.innerText = '창의 크기를 조절했습니다.';
-        };
+        box2.on('mousemove', function () {
+            pTag.text('box2에서 마우스가 움직영.');
+        });
+
+        $(window).on('scroll', function(){
+            pTag.text('창이 스크롤 되었엉.');
+        });
+            
+
+        $(window).on('resize', function(){
+            pTag.text('창 크기가 조절 되었엉.');
+        });
+            
 
     </script>
 </body>
