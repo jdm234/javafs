@@ -35,13 +35,14 @@
     <script>
         /* 
             요소.value ~ input에 입력된 값 반환
+            요소.value ~ 값 ~ input에 입력된 값 반환
         */
 
         const btn = document.querySelector('button');
         const inputTag = document.querySelector('input');
 
         btn.onclick = function () {
-            let num = inputTag.value;
+            let txt;
 
             if (num == '') {
                 alert('아무런 정보도 입력하지 않으셨습니다.');
