@@ -1,92 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>애플리케이션배포</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+  <title>메이플스토리 큐브 사용</title>
+  <script>
+    function useCube(cubeType) {
+      var grade = 0; // 큐브 등급
+      var upgradeChance = 5; // 등급 업그레이드 확률 (5%로 설정)
+      
+      // 등급별 확률 설정 (레어 50%, 에픽 30%, 유니크 15%, 레전더리 5%)
+      var gradeProbabilities = [50, 2.5, 1.1, 0.34];
+      
+      // 랜덤 등급 선택
+      var randomGrade = Math.random() * 100;
+      for (var i = 0; i < gradeProbabilities.length; i++) {
+        randomGrade -= gradeProbabilities[i];
+        if (randomGrade <= 0) {
+          grade = i;
+          break;
         }
-
-        #wrap {
-            margin: 100px 30px 0;
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 32px;
-        }
-
-        input {
-            width: 100%;
-            font-size: 17px;
-            border: 1px solid #444;
-            margin: 8px 0;
-            padding: 16px;
-        }
-
-        button {
-            width: 100%;
-            margin: 14px 0;
-            padding: 8px;
-            font-size: 17px;
-            background: yellow;
-        }
-
-        #member {
-            position: absolute;
-            left: 0;
-            width: 100%;
-            bottom: 545px;
-            font-size: 1rem;
-            text-align: center;
-            color: black;
-        }
-    </style>
+      }
+      
+      // 등급 업그레이드 여부 결정
+      var randomUpgrade = Math.random() * 100;
+      if (randomUpgrade <= upgradeChance) {
+        // 등급 업그레이드
+        grade++;
+      }
+      
+      // 등급 출력
+      var gradeText = '';
+      if (grade === 0) {
+        gradeText = '레어';
+      } else if (grade === 1) {
+        gradeText = '에픽';
+      } else if (grade === 2) {
+        gradeText = '유니크';
+      } else if (grade === 3) {
+        gradeText = '레전더리';
+      }
+      
+      alert(cubeType + ' 큐브 사용 결과: ' + gradeText + ' 등급');
+    }
+  </script>
 </head>
-
 <body>
-    <h1>게임 큐브 시뮬레이터</h1>
-    <input type="text" placeholder="아이디" id="loginId">
-    <input type="text" placeholder="비밀번호" id="loginPw">
-    <button>로그인</button>
-    <p id="member">회원이 아니신가요? 지금 가입 하세요!</p>
-    <button><a href="member.html">회원가입</a></button>
-
-    <script>
-        let temp = location.href.split('?');
-        let data = temp[1].split('/');
-        const userId = data[0];
-        const userPw = data[1];
-
-        const loginId = document.querySelector('#loginId');
-        const loginPw = document.querySelector('#loginPw');
-        const loginBtn = document.querySelector('button');
-
-        loginBtn.onclick = login;
-        
-        function login() {
-            let newId = loginId.value;
-            let newPw = loginPw.value;
-
-            if (userId === newId) {
-                if (userPw === newPw) {
-                    location.href = "service.html";
-                } else {
-                    alert('비밀번호가 맞지 않습니다.')
-                    location.reload();
-                }
-            } else {
-                alert('아이디가 맞지 않습니다.')
-                location.reload();
-            }
-        }
-    </script>
+  <h1>메이플스토리 큐브 사용</h1>
+  <button onclick="useCube('레드')">레드 큐브 사용</button>
+  <button onclick="useCube('블랙')">블랙 큐브 사용</button>
 </body>
-
 </html>
