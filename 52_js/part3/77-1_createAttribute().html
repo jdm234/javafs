@@ -20,6 +20,27 @@
             부모노드.appendChild(자식노드) ~ 부모 노드에 자식 노드 연결
         */
 
+        /* 
+            div 박스 안에 assets 폴더에 있는 pic_1.jpg 파일을 이미지로 삽입하시오.
+
+            메서드: 
+            A.createElement() ~ A에 b요소를 생성
+            A.createAttribute() ~ A에 속성 b를 생성
+            A.setAttributeNode() ~ A에 속성노드 b를 설정
+            A.appendChild() ~ A에 b를 추가
+            
+            속성: value
+        */
+
+        const info = document.createElement('#info');
+        const imgTag = document.createElement('img');
+        const srcAttr = document.createAttribute('src');
+        const altAttr = document.createAttribute('alt');
+        imgTag.setAttribute(srcAttr);
+        imgTag.setAttribute(altAttr);
+        srcAttr.value = '../assets/pic_1.jpg';
+        altAttr.value = '이미지'
+        info.appendChild(imgTag);
     </script>
 </body>
 

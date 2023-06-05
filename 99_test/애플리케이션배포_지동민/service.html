@@ -31,7 +31,7 @@
         }
 
         button {
-            width: 320px;
+            width: 350px;
             margin: 18px 0;
             padding: 8px;
             font-size: 18px;
@@ -59,9 +59,9 @@
         등급업 확률</h2></a>
     <h3>사용 하실 큐브를 선택해주세요~!</h3>
     <div style="text-align: center;">
-        <img src="/52_js/assets/redcube.jpg">
+        <img src="images/redcube.jpg">
         <button onclick="useCube('레드')">레드 큐브 사용하기</button>
-        <img src="/52_js/assets/blackcube.jpg">
+        <img src="images/blackcube.jpg">
         <button onclick="useCube('블랙')">블랙 큐브 사용하기</button>
         <button id="logoutBtn">로그 아웃</button>
     </div>
@@ -107,7 +107,7 @@
         }
         const logoutBtn = document.querySelector('#logoutBtn');
         const result = document.querySelector('#result');
-        /* let game = prompt('레드 큐브, 블랙 큐브 둘 중 하나만 입력하세요.'); */
+        let game = prompt('레드 큐브, 블랙 큐브 둘 중 하나만 입력하세요.');
 
         switch (game) {
             case '레드 큐브':

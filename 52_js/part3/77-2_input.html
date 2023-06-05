@@ -21,6 +21,19 @@
             부모노드.appendChild(자식노드) ~ 부모 노드에 자식 노드 연결
         */
 
+        const itmeList = document.querySelector('#itemList');
+        const inputBox = document.querySelector('#subject');
+        const btn = document.querySelector('button');
+        
+        btn.onclick = txtList;
+
+        function txtList(){
+            const item = document.createElement('li');
+            let txt = inputBox.value;
+            const itemTxt = document.createTextNode(txt);
+            itemList.appendChild(item);
+            item.appendChild(itemTxt);
+        }
     </script>
 </body>
 

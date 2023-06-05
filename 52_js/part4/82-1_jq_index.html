@@ -34,11 +34,11 @@
             속성: index
         */
 
-        document.querySelectorAll('li')[0].onclick = forEach(function(obj, idx)){
+        document.querySelectorAll('li')[0].onclick = forEach(function(obj, idx){
             obj.onclick = function(){
                 document.querySelector('p').innerText = idx;
             };
-       };
+       });
 
     </script>
 </body>
