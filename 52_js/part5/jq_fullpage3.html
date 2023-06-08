@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullPage</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            height: 100%;
+        }
+
+        #fullpage {
+            height: 100%;
+        }
+
+        #fullpage div {
+            width: 100%;
+            height: 100%;
+            height: 100vh;
+        }
+
+        #section1 {
+            background: yellow;
+        }
+
+        #section2 {
+            background: salmon;
+        }
+
+        #section3 {
+            background: pink
+        }
+
+        #section4 {
+            background: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div id="section1" class="section">섹션1</div>
+        <div id="section2" class="section">섹션2</div>
+        <div id="section3" class="section">섹션3</div>
+        <div id="section4" class="section">섹션4</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script>
+
+        /* 
+            마우스휠 조정시 위아래로 한 칸씩 섹션이동시킨다.
+            
+            이벤트: wheel
+            속성: nextElementSibling, previousElementSibling, offsetTop, ScrollTop
+            키워드: this
+
+            // mousewheel 이벤트 형식
+            요소.onwheel(function(e, delta){
+                if (e.deltaY < 0) {
+                    // 마우스휠을 위로 올림
+                } else  {
+                    // 마우스휠을 아래로 내림
+                }
+            });
+        */
+
+        // error(에러, bug): debugging(디버깅) ~ 에러 수정
+        // error 처리: try ~ catch
+        /* try {
+            실행코드
+        } catch */
+
+        const secs = document.querySelectorAll('.section');
+
+        for (let i = 0; i < secs.length; i++)
+
+    secs[i].mousewheel(function (e, delta) {
+
+            if (e.deltaY < 0) {
+                    // 마우스휠을 위로 올림
+                    try {
+                        let prev = this.previousElementSibling.offsettop;
+                        console.log(prev);
+                        document.documentElement.stop().animate({ scrollTop: prev });
+                    } catch (err) {
+                        return false;
+                    }
+                    // 마우스휠을 아래로 내림
+                    try {
+                        let next = this.nextElemntSibling.offsettop;
+                        console.log(next);
+                        document.documentElement.scrollTop = next;
+                    } catch (err) {
+                        return false;
+                    } //try ~ catch
+                } // if
+            }); // onwheel
+    </script>
+</body>
+
+</html>
