@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀페이지</title>
+    <link rel="stylesheet" href="fullpagestyle.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <div id="fullpage">
+        <section id="section1" class="section">
+            <h1>섹션 1</h1>
+        </section>
+        <section id="section2" class="section">
+            <h1>섹션 2</h1>
+        </section>
+        <section id="section3" class="section">
+            <h1>섹션 3</h1>
+        </section>
+        <section id="section4" class="section">
+    0        <h1>섹션 4</h1>
+        </section>
+
+    </div>
+
+    <footer>
+
+    </footer>
+</body>
+<script>
+
+
+    num = 1;
+    document.documentElement.onwheel = function (event) {
+        sec_top = document.querySelector("#section" + num).offsetTop;
+
+
+        if (event.deltaY < 0) {
+            sec_top = document.querySelector("#section" + num).offsetTop;
+            document.documentElement.scrollTop = sec_top;
+            num = num - 1;
+            if (num == 0) {
+                num = 1;
+            }
+
+        } else {
+            sec_top = document.querySelector("#section" + num).offsetTop;
+
+            document.documentElement.scrollTop = sec_top;
+
+            num = num + 1;
+            if (num > 4) {
+                num = 4;
+            }
+        }
+    };
+
+</script>
+
+</html>
