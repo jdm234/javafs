@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS+JS</title>
+    <style>
+        /* reset */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-family: 'Noto Sans KR';
+        }
+
+        /* GNB(Global Navigation Bar) */
+        nav {
+            z-index: 99999;
+            position: relative;
+            height: 32px;
+            background: red;
+        }
+
+        .nav_bg {
+            position: absolute;
+            left: 0;
+            top: 31px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        /* 크기, 색, 굵기 등으로 폰트의 위계를 지정한다   */
+        /* 1depth: main */
+        .main {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .main>li {
+            /* 삼각형 모양 기준 */
+            position: relative;
+            width: 160px;
+            height: 30px;
+            /* 메인메뉴와 서브메뉴 모두 텍스트 가운데 */
+            text-align: center;
+        }
+        
+        .main>li>a {
+            display: block;
+            padding: 5px 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .main>li:hover>a {
+            background: #ccc;
+            color: #333;
+        }
+
+        .main>li>a:hover:after {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            height: 0;
+            border-top: 10px solid;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            color: #ccc;
+        }
+
+        /* 2depth: sub */
+        .sub {
+            display: none;
+            padding: 15px 0;
+        }
+
+        .sub a {
+            color: #ccc;
+            font-size: 1.4rem;
+            line-height: 2;
+            font-weight: 300;
+            padding: 3px 0px;
+        }
+
+        .sub a:hover {
+            background: rgba(255, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav#gnb>ul.main>li*4>a{메인메뉴$}+ul.sub>li*4>a{서브메뉴$} -->
+    <div id="wrap">
+        <header>
+            <div id="innerHeader">
+                <nav>
+                    <div class="nav_bg"></div>
+                    <ul class="main">
+                        <li><a href="#">차량</a>
+                            <ul class="sub">
+                                <li><a href="#">SUV</a></li>
+                                <li><a href="#">CUV</a></li>
+                                <li><a href="#">Truck</a></li>
+                                <li><a href="#">EV</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">온라인 구매</a>
+                            <ul class="sub">
+                                <li><a href="#">온라인샵</a></li>
+                                <li><a href="#">가격 및 구매 안내</a></li>
+                                <li><a href="#">전시장 안내</a></li>
+                                <li><a href="#">온라인 신청</a></li>
+                                <li><a href="#">액세서리 & 부품</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">정비 서비스</a>
+                            <ul class="sub">
+                                <li><a href="#">정비예약</a></li>
+                                <li><a href="#">고객 지원</a></li>
+                                <li><a href="#">리콜 안내</a></li>
+                                <li><a href="#">차량 관리 서비스</a></li>
+                                <li><a href="#">쉐보레 컴프리트 케어</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">구매정보</a>
+                            <ul class="sub">
+                                <li><a href="#">차종별 구매혜택</a></li>
+                                <li><a href="#">구매혜택 FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">쉐보레 NOW</a>
+                            <ul class="sub">
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">EV Life</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+            <script>
+                    // 내비게이션바
+                    $('.main > li > a').mouseenter(function () {
+                        // a 태그 기본 이벤트 제거
+                        e.preventDefault();
+                        $('.sub').stop().slideDown(400);
+                        $('.nav_bg').stop().animate({ height: 150 }, 400);
+                    });
+                    $('nav').mouseleave(function () {
+                        $('.sub').stop().slideUp();
+                        $('.nav_bg').stop().animate({ height: 0 }, 400);
+                    });
+            </script>
+</body>
+
+</html>
