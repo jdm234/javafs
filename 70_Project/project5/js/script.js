@@ -41,3 +41,20 @@ $(function () {
         }
     });
 });
+
+// 섹션2 - ???
+const sec2 = $('.secton2'),
+    btn = sec2.find('.btn'),
+    txt1 = sec2.find('.txt1'),
+    txt2 = sec2.find('.txt2');
+
+$(window).scroll(function () {
+    let st = $(this).scrollTop();
+    let stVal = 600;
+    console.log(st);
+
+    if (st >=stVal) {
+        btn.css({opacity:1});
+
+    }
+});

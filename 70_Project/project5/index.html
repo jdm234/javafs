@@ -13,9 +13,144 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="js/script.js"></script>
 </head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+html {
+    font-size: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+/* 캐로셀 */
+
+
+/* layout */
+#slideWrap {
+    position: relative;
+    /* padding: 0 3%; */
+    height: 100vh;
+}
+
+#slideWrap .slider li {
+    width: 100% !important;
+    height: 100vh;
+    padding: 150px 0;
+    text-align: center;
+    background: no-repeat 50% 50%;
+}
+
+#slideWrap .slider li div {
+    position: relative;
+    top: 70px;
+    opacity: 0;
+    font-size: 2rem;
+    line-height: 2;
+}
+
+#slideWrap .slider li div span {
+    display: block;
+    font-size: 3.5rem;
+}
+
+#slideWrap .slider li img {
+    display: inline-block;
+}
+
+/* background */
+#slideWrap .slider .bg1 {
+    background-color: #15884E;
+    background-image: url(imgs/pic_1.png);
+}
+
+#slideWrap .slider .bg2 {
+    background-color: #90F8B5;
+    background-image: url(imgs/pic_2.png);
+}
+
+#slideWrap .slider .bg3 {
+    background-color: #58BF80;
+    background-image: url(imgs/pic_3.png);
+}
+
+#slideWrap .slider .bg4 {
+    background-color: #15884E;
+    background-image: url(imgs/pic_4.png);
+}
+
+/* 이전/이후 버튼 */
+#slideWrap .btn {
+    z-index: 9999;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 10px;
+}
+
+#slideWrap .btn a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    color: #fff;
+}
+
+#slideWrap .btn a:hover {
+    color: gold;
+    transition: color .3s;
+}
+
+#slideWrap #prev {
+    left: calc(10%);
+}
+
+#slideWrap #next {
+    right: calc(10%);
+}
+
+/* pager */
+#slideWrap .pager {
+    z-index: 9999;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slideWrap .pager a {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #999;
+    margin: 0 15px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#slideWrap .pager a img {
+    /* 100% 초기화를 제거 */
+    width: auto;
+    opacity: 0;
+    transform: translate(-40%, -40%);
+    transition: 5s;
+}
+
+#slideWrap .pager a.active img {
+    opacity: 1;
+}
+</style>
 <body>
     <div id="fullpage">
+        <!-- 섹션1 -->
         <div class="section" id="section1">
             <header id="header">
                 <h1 class="logo"><a href="#"><b>MEGACOFFEE</b><span>메가커피</span></a></h1>
@@ -77,12 +212,27 @@
         </div> <!-- section1 끝 -->
 
         <div class="section" id="section1">SECTION1</div>
+        <!-- 섹션2 -->
         <div class="section" id="section2">SECTION2</div>
+            <h2>섹션2</h2>
+            <div class="txt1 txt">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque quia ratione sunt, porro facere architecto aspernatur mollitia et autem animi?
+            </div>
+            <div class="txt2 txt">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque doloribus cum harum delectus beatae! Nostrum odit possimus reprehenderit quod quibusdam.
+            </div>
+            <a href="#" class="btn">자세히 보기</a>
+            <div id="product">
+                <div class="prod1"></div>
+                <div class="prod2"></div>
+                <div class="prod3"></div>
+            </div>
         <div class="section" id="section3">SECTION3</div>
         <div class="section" id="section4">SECTION4</div>
         <div id="footer">footer</div>
 
     </div> <!-- #fullpage 끝 -->
+    
 
 </body>
 
