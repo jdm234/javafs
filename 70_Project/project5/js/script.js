@@ -58,3 +58,19 @@ $(window).scroll(function () {
 
     }
 });
+
+// 섹션3: 탭
+        const tabBtn = $('#section3 .thumb li'),
+              bigImg = $('.big li'),
+              txt = $('#section3 .txt li');
+
+        tabBtn.click(function(){
+            let idx = $(this).index();
+            tabBtn.removeClass('active');
+            bigImg.removeClass('active');
+            txt.removeClass('active');
+            $(this).addClass('active');
+            bigImg.eq(idx).addClass('active');
+            txt.eq(idx).addClass('active');
+        });
+
