@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>지동민</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <script src="js.clock.js"></script>
 </head>
 
@@ -28,14 +32,17 @@
     <section id="home">
         <!-- 로고 -->
         <div class="clock">
-            <span class="yy">년</span>
-            <span class="mo">월</span>
-            <span class="dd">일</span>
-            <span class="we">요일</span>
-            <span class="hh">시</span>
-            <span class="mm">분</span>
-            <span class="ss">초</span>
+            <div class="time"></div>
+                <span class="hh">시</span>
+                <span class="mm">분</span>
+                <span class="ss">초</span>
+
+                <span class="yy">년</span>
+                <span class="mo">월</span>
+                <span class="dd">일</span>
+                <span class="we">요일</span>
         </div>
+   </div>
 
         <script>
 
@@ -51,91 +58,88 @@
             */
 
             // 문서의 DOM내용을 전부 읽은 후 함수를 실행
-            document.addEventListener('DOMContentLoaded', function () {
+
+            // 변수
+            const yArea = document.querySelector('.yy'),
+                  oArea = document.querySelector('.mo'),
+                  dArea = document.querySelector('.dd'),
+                  wArea = document.querySelector('.we'),
+                  hArea = document.querySelector('.hh'),
+                  mArea = document.querySelector('.mm'),
+                  sArea = document.querySelector('.ss');
 
 
+            setInterval(timer, 1000);
 
-                // 변수
-                const yArea = document.querySelector('.yy'),
-                    oArea = document.querySelector('.mo'),
-                    dArea = document.querySelector('.dd'),
-                    wArea = document.querySelector('.we'),
-                    hArea = document.querySelector('.hh'),
-                    mArea = document.querySelector('.mm'),
-                    sArea = document.querySelector('.ss');
+            function timer() {
 
+                // 날짜와 시간 객체 생성
+                let d = new Date();
 
-                setInterval(timer, 1000);
+                // 년(yyyy)
+                yArea.innerHTML = d.getFullYear() + '년';
+                // 월(mm): 0(1월) ~ 11(12월)
+                oArea.innerHTML = d.getMonth() + 1 + '월';
+                // 일(dd)
+                dArea.innerHTML = d.getDate() + '일';
+                // 요일(week): 0(일) ~ 6(토)
+                // if를 사용하여 요일을 일요일 ~ 토요일까지 문자열로 표시하기
 
-                function timer() {
+                let week = d.getDay();
 
-                    // 날짜와 시간 객체 생성
-                    let d = new Date();
+                if (week === 0) {
+                    week = '일요일';
+                } else if (week === 1) {
+                    week = '월요일';
+                } else if (week === 2) {
+                    week = '화요일';
+                } else if (week === 3) {
+                    week = '수요일';
+                } else if (week === 4) {
+                    week = '목요일';
+                } else if (week === 5) {
+                    week = '금요일';
+                } else {
+                    week = '토요일';
+                }
 
-                    // 년(yyyy)
-                    yArea.innerHTML = d.getFullYear() + '년';
-                    // 월(mm): 0(1월) ~ 11(12월)
-                    oArea.innerHTML = d.getMonth() + 1 + '월';
-                    // 일(dd)
-                    dArea.innerHTML = d.getDate() + '일';
-                    // 요일(week): 0(일) ~ 6(토)
-                    // if를 사용하여 요일을 일요일 ~ 토요일까지 문자열로 표시하기
+                wArea.innerHTML = week;
 
-                    let week = d.getDay();
+                let hh = d.getHours();
+                // 13 ~ 23
+                if (hh >= 13) {
+                    hh = 'PM ' + (hh - 12) + '시';
+                    // 12
+                } else if (hh >= 12) {
+                    hh = 'PM ' + hh + '시';
+                    // 10 ~ 11
+                } else if (hh >= 10) {
+                    hh = 'AM ' + hh + '시';
+                    // 0 ~ 9
+                } else {
+                    hh = 'AM 0' + hh + '시';
+                }
 
-                    if (week === 0) {
-                        week = '일요일';
-                    } else if (week === 1) {
-                        week = '월요일';
-                    } else if (week === 2) {
-                        week = '화요일';
-                    } else if (week === 3) {
-                        week = '수요일';
-                    } else if (week === 4) {
-                        week = '목요일';
-                    } else if (week === 5) {
-                        week = '금요일';
-                    } else {
-                        week = '토요일';
-                    }
+                hArea.innerHTML = hh;
 
-                    wArea.innerHTML = week;
+                let mm = d.getMinutes();
+                let ss = d.getSeconds();
 
-                    let hh = d.getHours();
-                    // 13 ~ 23
-                    if (hh >= 13) {
-                        hh = 'PM ' + (hh - 12) + '시';
-                        // 12
-                    } else if (hh >= 12) {
-                        hh = 'PM ' + hh + '시';
-                        // 10 ~ 11
-                    } else if (hh >= 10) {
-                        hh = 'AM ' + hh + '시';
-                        // 0 ~ 9
-                    } else {
-                        hh = 'AM 0' + hh + '시';
-                    }
+                if (mm < 10) {
+                    mm = '0' + mm;
+                }
+                if (ss < 10) {
+                    ss = '0' + ss;
+                }
 
-                    hArea.innerHTML = hh;
-
-                    let mm = d.getMinutes();
-                    let ss = d.getSeconds();
-
-                    if (mm < 10) {
-                        mm = '0' + mm;
-                    }
-                    if (ss < 10) {
-                        ss = '0' + ss;
-                    }
-
-                    mArea.innerHTML = mm + '분';
-                    sArea.innerHTML = ss + '초';
-                };
+                mArea.innerHTML = mm + '분';
+                sArea.innerHTML = ss + '초';
+            };
         </script>
     </section>
 
     <!-- 섹션2 -->
-    <section id="about">
+    <section id="about" class="container">
         <h2>소개</h2>
         <p><em>나는 코딩하기를 좋아한다.</em></p>
         <div class="container">
@@ -178,14 +182,16 @@
                 </div> <!-- //.progress -->
             </div> <!-- //.skill -->
         </div> <!-- //.container -->
-
-        <ul class="counter">
-            <li><span>9+</span>Page Count</li>
-            <li><span>4+</span>Frontend Projects Done</li>
-            <li><span>3+</span>Backend Projects Done</li>
-            <li><span>2+</span>National Technical Qualification</li>
-        </ul>
     </section>
+        <div id="counter" class="container=fluid">
+            <!-- .row가 display:flex; -->
+            <ul class="row">
+                <li class="col-sm6 col-md"><span>9+</span>Page Count</li>
+                <li class="col-sm6 col-md"><span>4+</span>Frontend Projects Done</li>
+                <li class="col-sm6 col-md"><span>3+</span>Backend Projects Done</li>
+                <li class="col-sm6 col-md"><span>2+</span>National Technical Qualification</li>
+            </ul>
+        </div>
 
     <!-- 섹션3 -->
     <section id="portfolio">
@@ -194,16 +200,16 @@
         <p>Here are some of my latest lorem work ipsum tipsum.<br>Click on the images to make them bigger</p>
         <div class="container">
             <ul>
-                <li><img src="images/pf1.jpg" alt="포트폴리오1"></li>
-                <li><img src="images/pf2.jpg" alt="포트폴리오2"></li>
-                <li><img src="images/pf3.jpg" alt="포트폴리오3"></li>
-                <li><img src="images/pf4.jpg" alt="포트폴리오4"></li>
+                <li><a href="images/big1.png" data-lightbox="roadtrip"><img src="../assets/thumb_pic_1.png" alt="포트폴리오1 - 마이사이트"></a></li>
+                <li><a href="images/big2.png" data-lightbox="roadtrip"><img src="../assets/thumb_pic_1.png" alt="포트폴리오2 - 메가커피(반응형)"></a></li>
+                <li><a href="images/big3.png" data-lightbox="roadtrip"><img src="../assets/thumb_pic_1.png" alt="포트폴리오3 - 메가커피(웹디)"></a></li>
+                <li><a href="images/big4.png" data-lightbox="roadtrip"><img src="../assets/thumb_pic_1.png" alt="포트폴리오4 - 메가커피(리뉴얼2차)"></a></li>
                 <li><img src="images/pf5.jpg" alt="포트폴리오5"></li>
                 <li><img src="images/pf6.jpg" alt="포트폴리오6"></li>
                 <li><img src="images/pf7.jpg" alt="포트폴리오7"></li>
                 <li><img src="images/pf8.jpg" alt="포트폴리오8"></li>
             </ul>
-            <div class="moreBtn"><a href="#">LOAD MORE</a></div>
+            <div class="moreBtn"><a href="#" class="btn btn-outline-info">LOAD MORE</a></div>
         </div> <!-- //.container -->
     </section>
 
@@ -222,7 +228,7 @@
                 <address>
                     <i class="fa-solid fa-location-dot"></i></i>경기도 안양시<br>
                     <i class="fa-solid fa-phone"></i>Phone: +82 10-1234-1234<br>
-                    <i class="fa-solid fa-envelope"></i>Email: hong@google.com
+                    <i class="fa-solid fa-envelope"></i>Email: jdm234@naver.com
                 </address>
                 <p>Swing by for a cup of, <i class="fa-solid fa-mug-saucer"></i></i> or leave me a note:</p>
                 <form action="message.php" method="post">

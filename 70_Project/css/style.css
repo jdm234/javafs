@@ -124,16 +124,17 @@ section h2 + p {
 .progress .lst:nth-of-type(3) div span {
     width:75%;
 }
-.counter {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+#counter {
+    /* display: flex;
+    justify-content: space-around;*/
     height: 132px;
     background: #616161;
+    color: #fff;
+    align-items: center; 
 }
-.counter span {
+#counter span {
     display: block;
-    text-align: center;
+
 }
 
 /* section3 */
@@ -155,6 +156,7 @@ section h2 + p {
     width: 231px;
     height: 162px;
     margin-bottom: 12px;
+    border: 1px solid rgba(0, 0, 0, 85 );
     overflow:hidden;
 }
 
@@ -162,9 +164,9 @@ section h2 + p {
     margin-top: 64px;
     text-align: center;
 }
-#portfolio .moreBtn a {
+#portfolio .moreBtn button {
     padding: 12px 24px;
-    background: #f1f1f1;
+    font-size: 1.5rem;
 }
 
 /* section4 */
