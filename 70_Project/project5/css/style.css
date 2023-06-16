@@ -20,6 +20,7 @@
     padding: 0 60px;
     background: transparent;
     /* background: #fdd000; */
+    transition: .5s .5s;
 }
 
 /* 로고 */

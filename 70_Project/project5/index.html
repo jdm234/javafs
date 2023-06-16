@@ -147,6 +147,47 @@
     #slideWrap .pager a.active img {
         opacity: 1;
     }
+
+    /* 패밀리사이트 */
+    .fs {
+        position: relative;
+        top: 70px;
+        width: 240px;
+        height: 50px;
+    }
+
+    .fs .fsBtn {
+        display: inline-block;
+        width: 240px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: #494949;
+        border: 1px solid #676767;
+        color: #b9b9b9;
+        font-weight: 700;
+    }
+
+    .fs i {
+        margin-left: 40px;
+    }
+
+    .fs ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 50px;
+        width: 100%;
+        background: #494949;
+        border: 1px solid #676767;
+        border-bottom: none;
+        padding: 15px 40px;
+    }
+
+    .fs ul a {
+        color: #b9b9b9;
+        line-height: 2;
+    }
 </style>
 
 <body>
@@ -232,13 +273,6 @@
     </div>
 
     <!-- 오른쪽 내비게이션 -->
-    <ul id="indicator">
-        <li><a href="#section1" class="on">section1</a><span>section1</span></li>
-        <li><a href="#section2">section2</a><span>section2</span></li>
-        <li><a href="#section3">section3</a><span>section3</span></li>
-        <li><a href="#section4">section4</a><span>section4</span></li>
-    </ul>
-
     <!-- 섹션3 -->
     <div class="section" id="section3">SECTION3</div>
     <!-- 썸네일 이미지(110*110)와 텍스트 -->
@@ -314,7 +348,7 @@
         </li>
     </ul>
     </div>
-    <div class="section" id="section4">
+    <div class="section" id="section4">SECTION4</div>
         <div class="bgTxt">
             <div class="top">
                 <span>CONSIDERATION</span><span>AFFINITY</span><span>PRESTIGE</span>
@@ -356,8 +390,32 @@
                 </div>
             </div> <!-- identity -->
         </div><!-- .container -->
-        /div>
-        <div id="footer">footer</div>
+    </div>
+    <div id="footer">footer
+    <div class="leftCont">
+        <div class="bnb">
+            <ul>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">1:1문의</a></li>
+                <li><a href="#">정도경영 신문고</a></li>
+            </ul>
+        </div>
+        <div class="addr">
+            <p>서울특별시 강남구 강남대로 518 11층, 13층 (주)앤하우스</p>
+            <p>본사대표번호: 02-335-0656 | FAX: 02-325-5199 | 고객센터: 1588-8298</p>
+        </div>
+        <div class="copy">COPYRIGHT 2023 MEGA MGC COFFEE. ALL RIGHTS RESERVED.</div>
+    </div>
+    <div class="fs">
+        <a href="#" class="fsBtn">관련 사이트 열기<i class="fa-solid fa-plus"></i></a>
+        <ul>
+            <li><a href="https://blog.naver.com/ekddusekddus">블로그</a></li>
+            <li><a href="https://www.facebook.com/mega.mgc.coffee.official">페이스북</a></li>
+            <li><a href="https://www.instagram.com/mega.mgc.coffee_official/">인스타그램</a></li>
+        </ul>
+    </div>
+</div>
 
     </div> <!-- #fullpage 끝 -->
 
@@ -399,6 +457,7 @@
             // cnt: 0, 1, 2
             inner.eq(idx).find('li').eq(cnt).fadeIn(1000).siblings().fadeOut(1000);
         };
+
     </script>
 </body>
 

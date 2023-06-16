@@ -1,6 +1,21 @@
 // 문서가 준비되면 함수 실행
 $(function () {
 
+    //헤더
+    const headerBg = $('#header');
+
+    // 윈도우에 스크롤 이벤트가 발생하면 함수 실행
+    $(window).scroll(function () {
+        // 스크롤바를 스크롤한 양을 st에 저장
+        let st = document.documentElement.scrollTop;
+        let stVal = 600;
+
+        if (st >= stVal) {
+            headerBg.css({ background: '#888' })
+        } else {
+            headerBg.css({ background: 'transparent' })
+        }
+    });
     // 내비게이션바
     $('.main > li > a').mouseenter(function (e) {
         // a태그 기본 이벤트 제거
