@@ -28,8 +28,8 @@ $(function () {
                 clearInterval(timer);
             } else {
                 w++;
-                elem.eq(idx).find({ width: w + "%" });
-                elem.eq(idx).find(w + "%");
+                elem.eq(idx).find('div').css({ width: w + "%" });
+                elem.eq(idx).find('div').text(w + "%");
             }
         }
     }
@@ -37,27 +37,27 @@ $(function () {
 
 
     // 카운터
-    const elem = $('#counter span');
-    let state = 0;
-
+    let counterState = 0;
     $(window).scroll(function () {
+
         // 윈도우 스크롤이 150이상이면
         if ($(this).scrollTop() >= 2150) {
-            if (state === 0) {
+            if (counterState === 0) {
                 move(0, 32, 100);
                 move(1, 8, 200);
                 move(2, 4, 300);
                 move(3, 3, 400);
-                state = 1;
+                counterState = 1;
             } else {
                 return
             }
         } else {
-            state = 0;
+            counterState = 0;
         }
     });
 
     function move(idx, maxCnt, mSec) {
+        const elem = $('#counter span');
         let num = 0;
         // counter 함수를 0.1초마다 실행
         const timer = setInterval(counter, mSec);
