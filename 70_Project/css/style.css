@@ -43,8 +43,8 @@ header i {
 
 /* section2~4 공통 */
 .container {
-    width: 960px;
-    margin: 0 auto;
+    /* width: 960px;
+    margin: 0 auto; */
     padding-bottom: 81px;
 }
 section h2 {
@@ -68,29 +68,29 @@ section h2 + p {
 }
 
 /* section2 */
-.profile {
+/* .profile {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+} */
 .profile p {
     text-align: justify;
     word-break: break-all;
 }
 .profile p:first-of-type {
-    flex: 100%;
+    /* flex: 100%; */
     margin-bottom: 54px;
 }
 .profile div {
-    flex: 0 0 48%;
+    /* flex: 0 0 48%; */
     text-align: center;
 }
-.profile p:last-of-type {
+/* .profile p:last-of-type {
     flex: 0 0 48%;
-}
-.photo {
+} */
+/* .photo {
     width: 425px;
-}
+} */
 .photo img {
     margin-top: 54px;
 }
@@ -102,28 +102,23 @@ section h2 + p {
     margin: 54px 0;
     text-align: center;
 }
-.progress .lst > span {
-    display: inline-block;
-    margin: 16px;
+
+/* 프로그래스바 */
+#skill .progress {
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 16px;
+    height: 30px;
 }
-.progress .lst div {
-    background: #eee;
-}
-.progress .lst div span {
-    display: block;
-    height: 34px;
+
+#skill .progress div {
+    width: 0%;
+    background-color: #04AA6D;
     text-align: center;
-    background: #555;
+    line-height: 30px;
+    color: white;
 }
-.progress .lst:nth-of-type(1) div span {
-    width:90%;
-}
-.progress .lst:nth-of-type(2) div span {
-    width:85%;
-}
-.progress .lst:nth-of-type(3) div span {
-    width:75%;
-}
+
 #counter {
     /* display: flex;
     justify-content: space-around;*/
@@ -134,7 +129,6 @@ section h2 + p {
 }
 #counter span {
     display: block;
-
 }
 
 /* section3 */
