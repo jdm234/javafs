@@ -44,13 +44,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         // 변수 선언
+        let state = 0;
+
         $(window).scroll(function () {
-            if ($(this).scrollTop >= 150) {
+            if ($(this).scrollTop() >= 150) {
                 if (state === 0) {
-                    pgbar(95)
-                    pgbar(85)
-                    pgbar(75)
-                    bar();
+                    pgbar(95);
+                    pgbar(85);
+                    pgbar(75);
                     state = 1;
                 } else {
                     return;

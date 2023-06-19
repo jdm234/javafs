@@ -43,8 +43,6 @@ header i {
 
 /* section2~4 공통 */
 .container {
-    /* width: 960px;
-    margin: 0 auto; */
     padding-bottom: 81px;
 }
 section h2 {
@@ -68,29 +66,16 @@ section h2 + p {
 }
 
 /* section2 */
-/* .profile {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-} */
 .profile p {
     text-align: justify;
     word-break: break-all;
 }
 .profile p:first-of-type {
-    /* flex: 100%; */
     margin-bottom: 54px;
 }
 .profile div {
-    /* flex: 0 0 48%; */
     text-align: center;
 }
-/* .profile p:last-of-type {
-    flex: 0 0 48%;
-} */
-/* .photo {
-    width: 425px;
-} */
 .photo img {
     margin-top: 54px;
 }
@@ -118,12 +103,12 @@ section h2 + p {
     line-height: 30px;
     color: white;
 }
-
-#counter {
-    /* display: flex;
-    justify-content: space-around;*/
-    height: 132px;
+/* 카운터 */
+#counter ul{
+    align-items: center;
+    /* height: 132px; */
     background: #616161;
+    padding: 24px 0;
     color: #fff;
     align-items: center; 
 }
@@ -135,23 +120,16 @@ section h2 + p {
 #portfolio .parallax {
     background-image: url(../images/parallax2.jpg);
 }
-/* 
-    max-width: 960px
-    column count: 12
-    1 column width: 69px
-    gutter: 12px 
-*/
-#portfolio ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+
 #portfolio li {
-    width: 231px;
     height: 162px;
     margin-bottom: 12px;
-    border: 1px solid rgba(0, 0, 0, 85 );
+    
     overflow:hidden;
+}
+
+#portfolio li img {
+    border: 1px solid rgba(0, 0, 0, 255);
 }
 
 #portfolio .moreBtn {
@@ -168,12 +146,7 @@ section h2 + p {
     background-image: url(../images/parallax3.jpg);
 }
 
-#contact .container {
-    display: flex;
-}
-
 #map {
-    flex: 0 0 330px;
     height: 160px;
     margin-right: 30px;
     border-radius: 5px;
@@ -188,21 +161,12 @@ section h2 + p {
     margin: 16px 0;
 }
 
-#contact form {
-    text-align: right;
-}
-
 #contact[name] {
-    width: 292px;
     height: 44px;
     padding-left: 8px;
 }
 
-#contact[name="user_name"]
-
-
 #contact[name*="message"] {
-    width: 600px;
     margin: 16px 0;
 }
 
