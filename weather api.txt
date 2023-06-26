@@ -1,0 +1,31 @@
+09b50efdc7ba4ae3945b81c2cbd22602
+
+Example on how to make an API call using your API key
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}
+
+id 뒤에 있는 숫자는 도시코드 입니다.
+도시코드를 얻어와야함
+서울 - 또는 안양 ex)anyang (영문으로)
+
+메인화면 - 돋보기(검색창) - weather in your city placeholder로 써진부분에 anyang 검색
+검색된 안양을 클릭하면 안양날씨를 볼수 있고
+상단 주소줄에 https://openweathermap.org/city/1846898 -> 도시코드 
+
+http://api.openweathermap.org/data/2.5/forecast?id=1846898&appid=09b50efdc7ba4ae3945b81c2cbd22602
+
+var array = [1,2,3,4]
+array[0] = 1;
+var array1 = [{temp:value,temp_min:value}. {temp:value,temp_min:value}]
+출력 해서 나온 온도는 kelvin 온도.
+293.76
+메뉴 - api - Parameters of API response - json - Units of measurement
+기본은 kelvin
+&units=metric 뒤에 붙인다.(섭씨)
+
+forcast(예보)
+weather(현재날씨)
+http://api.openweathermap.org/data/2.5/weather?id=1846898&appid=09b50efdc7ba4ae3945b81c2cbd22602
+
+날씨 아이콘이 있는곳
+https://openweathermap.org/weather-conditions
+URL is https://openweathermap.org/img/wn/10d@2x.png
