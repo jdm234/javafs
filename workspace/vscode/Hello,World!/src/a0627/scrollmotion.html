@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li {
+            list-style: none;
+        }
+        .image{opacity: 0;}
+    </style>
+    
+</head>
+<body>
+    <ul>
+        <li class="animatable"><a href="#"><img src="/images/work1.jpg"></a></li>
+        <li class="animatable"><a href="#"><img src="/images/work2.jpg"></a></li>
+        <li class="animatable"><a href="#"><img src="/images/work3.jpg"></a></li>
+        <li class="animatable"><a href="#"><img src="/images/work4.jpg"></a></li>
+        <li class="animatable"><a href="#"><img src="/images/work5.jpg"></a></li>
+        <li class="animatable"><a href="#"><img src="/images/work6.jpg"></a></li>
+    </ul>
+</body>
+<script>
+    window.onload = function() {
+        window.addEventListener("scroll", function(e) {
+            scrollEvent();
+        });
+    }
+
+    var scrollEvent = function() {
+        var scroll = window.innerHeight + window.scrollY;
+        var itemList = document.querySelectorAll(".list_cont li");
+        Array.prototype.forEach.call(itemList, function(li){
+            if(li.offsetTop < scroll) {
+                li.classList.remove("animatable");
+                li.classList.add("animated");
+            }
+        });
+    }
+
+</script>
+</html>
