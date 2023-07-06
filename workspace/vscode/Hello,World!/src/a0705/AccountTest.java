@@ -10,12 +10,23 @@ public class AccountTest {
 class Account {
     private int balance;
 
+    public Account(String ano, String owner, int balance2) {
+    }
+
     public int getBalance() {
         return balance;
     }
 
     public void setBalance(int b) {
         balance = b;
+    }
+
+    public char[] getAno() {
+        return null;
+    }
+
+    public char[] getOwner() {
+        return null;
     }
     
     // 게터 메서드
