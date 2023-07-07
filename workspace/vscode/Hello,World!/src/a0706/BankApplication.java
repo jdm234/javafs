@@ -112,7 +112,7 @@ public class BankApplication {
         Account account = null;
         for(int i = 0; i<accountArray.length; i++){
             if(accountArray[i] != null){
-                char[] dbAno = accountArray[i].getAno();
+                String dbAno = accountArray[i].getAno();
                 if(dbAno.equals(ano)){
                     account = accountArray[i];
                break;
