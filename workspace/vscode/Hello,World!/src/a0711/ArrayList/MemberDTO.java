@@ -1,17 +1,11 @@
 package ArrayList;
 
-public class Member {
-    // 번호 이름 나이 주소
-    private int id;
-    private String name;
-    private int age;
-    private String address;
-
-    // 기본생성자
-    public MemberDTO() {
-
-    }
-    
+public class MemberDTO {
+    //번호 이름 나이 주소
+	private int id;
+	private String name;
+	private int age;
+	private String address;
     public int getId() {
         return id;
     }
@@ -36,15 +30,20 @@ public class Member {
     public void setAddress(String address) {
         this.address = address;
     }
-    public Member(int id, String name, int age, String address) {
+
+    // 기본생성자
+	public MemberDTO() {
+		
+	}
+    public MemberDTO(int id, String name, int age, String address) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.address = address;
     }
-
-    // toString
+// toString
     public String toString () {
-        return " " + id + "\t" + name + "\t" + age + "\t" + address;
-    }
+    return " "+ id + "\t" + name + "\t" + age+"\t"+ address;
+}
+
 }
