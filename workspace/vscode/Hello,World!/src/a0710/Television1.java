@@ -1,6 +1,6 @@
 package a0710;
 
-public class Television implements RemoteControl{
+public class Television1 implements RemoteControl{
     private int volume;
     @Override
     public void turnOn() {

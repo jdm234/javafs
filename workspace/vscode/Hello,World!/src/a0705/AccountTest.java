@@ -13,6 +13,9 @@ class Account {
     public Account(String ano, String owner, int balance2) {
     }
 
+    public Account() {
+    }
+
     public int getBalance() {
         return balance;
     }

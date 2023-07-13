@@ -2,8 +2,8 @@ package a0712;
 
 public class CarAgency implements Rentable<Car> {
     @Override
-    public Car1 rent() {
-        return new Car1();
+    public Car rent() {
+        return new Car();
     }
 }
 

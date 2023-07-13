@@ -2,13 +2,13 @@ package a0712;
 
 public class GenericExample2 {
     public static void main(String[] args) {
-        Homeagency homeAgency = new HomeAgency();
+        HomeAgency homeAgency = new HomeAgency();
         Home home = homeAgency.rent();
         home.turnOnLight();
 
-        Car1Agency car1Agency = new Car1Agency();
-        Car1 car1 = car1Agency.rent();
-        car1.run();
+        CarAgency carAgency = new CarAgency();
+        Car car = carAgency.rent();
+        car.run();
     }
 }
 
