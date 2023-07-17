@@ -6,8 +6,11 @@ public class Member {
         int age;
     }
 
+    private String Name;
+    private String id;
+
     Member(String name, String id) {
-        this.name = name;
+        this.Name = name;
         this.id = id;
     }
 }

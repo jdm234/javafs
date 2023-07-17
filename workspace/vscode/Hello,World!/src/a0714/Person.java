@@ -7,5 +7,9 @@ public class Person {
 
     public void action1(Object object) {
     }
+
+    public Member getMember1(Object object) {
+        return null;
+    }
 }
 

@@ -13,7 +13,7 @@ public class Week {
     THURSDAY,
     FRIDAY,
     SATURDAY,
-    SUNDAY,
+    SUNDAY;
 }
 
 public enum LoginResult {

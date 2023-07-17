@@ -2,7 +2,7 @@ package a0713;
 
 public class Student {
     public static void main(String[] args) {
-        @Override
+    @Override
     public int hashCode() {
         return studentNum;
     }
