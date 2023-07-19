@@ -1,8 +1,9 @@
-package hellospring.hello.Domain;
+package hellospring.hello.domain;
 
 public class Member {
     private Long id;
     private String name;
+
     public Long getId() {
         return id;
     }
@@ -19,5 +20,11 @@ public class Member {
         this.name = name;
     }
 
-
+    @Override
+    public String toString() {
+            return "Member{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
