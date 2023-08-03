@@ -16,8 +16,10 @@ repositories {
 }
 
 dependencies {
-	compileOnly("org.springframework.boot:spring-boot-devtools")
+	implementation 'org.projectlombok:lombok:1.18.26'
+    compileOnly("org.springframework.boot:spring-boot-devtools")
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'

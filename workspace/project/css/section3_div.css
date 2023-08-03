@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box2, .box3{
+    background: wheat;
+    display: inline-block;
+    width: 272px;
+    height: 166px;
+    margin: auto;
+
+        
+}
+
+li {
+    list-style: none;
+}

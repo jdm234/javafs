@@ -58,6 +58,16 @@ public class MemberController {
         model.addAttribute("members", members);
         return "members/memberList";
     }
+    // @valid 사용해서 MemberForm 객체를 검증한다.
+    // 검증 결과는 BindingResult 객체에 저장된다.
+    // result.hasErros()를 사용하여 검증결과 오류 있으면
+    // 회원 가입 폼(members/createMemberForm)으로 다시 이동
+    // MemberForm 객체에서 입력받은 도시(city), 거리(streat), 우편번호)(zipcode)
+    // 정보를 사용하여 Address 객체를 생성
+    // Member 객체를 생성하여 외원 이름을 MemberForm 객체에서 입력받은 이름으로 설정
+    // 앞서 만들었던 'Address' 객체를 회원의 주소 정보로 설정
+    // MemberService.join(member)를 통해 회원 객체를 회원 가입 처리한다.
+
 
 }
 
