@@ -15,6 +15,30 @@ li {
     list-style: none;
 }
 
-.utlimenu {
+.logo {
+    display: flex;
+    padding: 32px;
+}
+
+.menu li {
     display: inline-block;
+}
+
+.util_menu {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    position: relative;
+    top: -95px;
+    left: 625px;
+    z-index: 9999;
+    width: 1008px;
+    padding: 0 25px;
+    height: 154px;
+}
+
+.bg menu{
+    margin: auto;
+    padding: 0 32px;
+    
 }
