@@ -37,8 +37,8 @@ li {
     height: 154px;
 }
 
-.bg menu{
-    margin: auto;
-    padding: 0 32px;
+.bg_menu{
+    top: 85px;
+    margin: 24px;
     
 }
