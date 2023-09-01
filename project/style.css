@@ -20,6 +20,7 @@ li {
     padding: 32px;
 }
 
+/* header */
 .menu li {
     display: inline-block;
 }
@@ -29,7 +30,7 @@ li {
     justify-content: space-between;
     align-content: center;
     position: relative;
-    top: -95px;
+    transform: translate(0, -95px);
     left: 625px;
     z-index: 9999;
     width: 1008px;
@@ -38,7 +39,13 @@ li {
 }
 
 .bg_menu{
-    top: 85px;
+    display: block;
     margin: 24px;
-    
+    transform: translate(10px, -180px);    
+}
+
+/* section */
+section li{
+    display: inline-block;
+    margin: 6px;
 }
