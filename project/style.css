@@ -49,3 +49,20 @@ section li{
     display: inline-block;
     margin: 6px;
 }
+
+/* 앨범 */
+.column {
+    float: left;
+    width: 22.5%;
+    height: 45px;
+    padding: 4px;
+    top: 100px;
+    margin-bottom: 95px;
+  }
+  
+  /* 앨범 image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
