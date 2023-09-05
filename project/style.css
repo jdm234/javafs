@@ -47,13 +47,15 @@ li {
 /* section */
 section li{
     display: inline-block;
-    margin: 6px;
+    transform: translate(450px, -32px);
+    margin: 0 6 30px;
+    padding: 4px;
 }
 
 /* 앨범 */
 .column {
     float: left;
-    width: 22.5%;
+    width: 30.5%;
     height: 45px;
     padding: 4px;
     top: 100px;
