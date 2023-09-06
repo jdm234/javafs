@@ -2,69 +2,90 @@
 
 /* reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    color: #000;
+  color: #000;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .logo {
-    display: flex;
-    padding: 32px;
+  display: flex;
+  padding: 32px;
 }
 
 /* header */
 .menu li {
-    display: inline-block;
+  display: inline-block;
 }
 
 .util_menu {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
-    position: relative;
-    transform: translate(0, -95px);
-    left: 625px;
-    z-index: 9999;
-    width: 1008px;
-    padding: 0 25px;
-    height: 154px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  position: relative;
+  transform: translate(0, -95px);
+  left: 625px;
+  z-index: 9999;
+  width: 1008px;
+  padding: 0 25px;
+  height: 154px;
 }
 
-.bg_menu{
-    display: block;
-    margin: 24px;
-    transform: translate(10px, -180px);    
+.rolling {
+  width: 300px;
+  height: 34px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+
+    .rolling__list {
+    li {
+        height: 34px;
+        padding: 0 1rem;
+        font-weight: 700;
+        line-height: 34px;
+    }
+    }
+}
+.bg_menu {
+  display: block;
+  margin: 24px;
+  transform: translate(10px, -180px);
 }
 
 /* section */
-section li{
-    display: inline-block;
-    transform: translate(450px, -32px);
-    margin: 0 6 30px;
-    padding: 4px;
+section li {
+  display: inline-block;
+  transform: translate(600px, -38px);
+  margin: 0 6 35px;
+  padding: 4px;
+}
+
+section {
+  margin: 12px;
+  padding: 4px;
+  top: -120px;
 }
 
 /* 앨범 */
 .column {
-    float: left;
-    width: 30.5%;
-    height: 45px;
-    padding: 4px;
-    top: 100px;
-    margin-bottom: 95px;
-  }
-  
-  /* 앨범 image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+  float: left;
+  width: 30.5%;
+  height: 45px;
+  padding: 4px;
+  top: 100px;
+  margin-bottom: 95px;
+}
+
+/* 앨범 image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
