@@ -40,6 +40,7 @@ li {
 
 .rolling-container {
   overflow: hidden;
+  transform: translate(420%, -220%);
   width: 96px; /* 롤링 컨테이너의 너비 조절 */
   height: 30px; /* 롤링 컨테이너의 높이 조절 */
 }
@@ -48,8 +49,7 @@ li {
   display: block;
   padding: 0;
   margin: 0;
-  animation: rolling-scroll 30s linear infinite; /* 롤링 애니메이션 적용 */
-  animation-fill-mode;
+  animation: rolling-scroll 20s linear infinite; /* 롤링 애니메이션 적용 */
 }
 
 .rolling li {

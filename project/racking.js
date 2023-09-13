@@ -16,3 +16,4 @@ function rollText() {
   rolling.appendChild(firstItem);
 }
 
+
