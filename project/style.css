@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -21,21 +22,33 @@ li {
 }
 
 /* header */
+.header {
+  display: block;
+  width: 1008px;
+  height: 192px;
+  margin: 0 1px 0 1px;
+  padding: 0 19px 0 19px;
+}
 .menu li {
   display: inline-block;
 }
 
 .util_menu {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
+  display: block;
   position: relative;
-  transform: translate(0, -95px);
-  left: 625px;
-  z-index: 9999;
   width: 1008px;
-  padding: 0 25px;
-  height: 154px;
+  height: 10px;
+  bottom: 125px;
+  text-align: end;
+}
+
+.util_menu a {
+  font-weight: 100;
+  color: black;
+}
+
+.util_menu a:hover {
+  color: black;
 }
 
 .rolling-container {
@@ -58,7 +71,7 @@ li {
 }
 
 .rolling span {
-  color: green;
+  color: gray;
 }
 
 .rolling a {
@@ -67,17 +80,28 @@ li {
 
 @keyframes rolling-scroll {
   0% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
-      transform: translateY(-100%);
+    transform: translateY(-100%);
   }
 }
 
 .bg_menu {
   display: inline-block;
-  margin: 24px;
-  transform: translate(20px, -180px);
+  height: 38px;
+  background: #ffffff; 
+
+}
+
+.bg_menu a {
+  font-size: 1.03rem;
+  font-weight: 600;
+  color: black;
+}
+
+.bg_menu a:hover {
+  color: green;
 }
 
 /* section */
@@ -91,7 +115,7 @@ section li {
 section {
   margin: 12px;
   padding: 4px;
-  top: -120px;
+  
 }
 
 /* 앨범 */
