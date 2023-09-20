@@ -159,6 +159,9 @@ select{
   top: 10px;
   right: 12px;
   margin: 0;
+}
+.search-bar button {
+	width: 100px;
 }    
   
 /*------------ Header --------------- */
@@ -191,9 +194,8 @@ select{
 	margin-top: 25px;
 	width: 300px;
 }
-/* -------------- End of Header------------------ */
 
-/* --------- Banner ---------- */
+/* --------- 배너 ---------- */
 #templatemo_banner {
 	clear: both;
 	width: 970px;
